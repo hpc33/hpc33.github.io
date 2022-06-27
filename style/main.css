@@ -38,3 +38,7 @@ html, body {
     padding: 200px 110px 200px 110px;
 }
 
+.link-light:hover {
+    color: #ffcd39 !important;
+}
+

@@ -334,12 +334,13 @@ header h1 {
     float: left;
   }
   .cd-timeline-content .cd-date {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     left: 122%;
     top: 6px;
     font-size: 16px;
     font-size: 1rem;
+    color: #f0ca45;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;

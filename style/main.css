@@ -9,8 +9,8 @@ html, body {
 
 .white-side-wrapper {
     width: 15.625em;
-    position: relative;
     top: 50%;
+    position: relative;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
@@ -33,18 +33,197 @@ html, body {
     font-size: 80px;
 }
 
+@media (max-width: 768px) { 
+    .fs-xxxl {
+        font-size: 55px;
+    }
+}
+
+.my-nav {
+    padding-top: 185px;
+}
+
+@media (max-width: 768px) { 
+    .my-nav {
+        padding-top: 0px;
+    }
+}
+
 .right-column-wrapper {
-    padding: 0 110px 0 110px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    padding: 40px 110px 0 110px;
+    /* position: relative; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* -webkit-transform: translateY(-50%); */
+}
+
+@media (max-width: 768px) { 
+    .row {
+        height: auto !important;
+    }
+    .right-column-wrapper {
+        padding: 0;
+    }
+}
+
+.right-column-wrapper > ul {
+    padding: 0;
+    margin-bottom: -1px;
 }
 
 .link-light:hover {
     color: #ffcd39 !important;
 }
 
-.nav >li > a {
+.my-nav-link > a {
     padding-left: 0px;
+    padding-right: 50px;
+    color: white;
+}
+
+.my-nav-link > a:hover {
+    padding-left: 0px;
+    padding-right: 50px;
+    color: #ffcd39;
+}
+
+
+
+@media (max-width: 768px) { 
+    .right-column-wrapper ul {
+        display: none;
+    }
+}
+
+.tc-deco-font {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 205, 57, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    color: #ffcd39;
+}
+
+
+
+/* float menun css */
+.float-nav {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.float-nav > a.menu-button {
+    text-decoration: none;
+    display: block;
+    background-color: #ffc008;
+    color: #141619;
+    padding: 17px 19px 12px 19px;
+    text-align: center;
+    /* box-shadow: 2px 2px 8px #777; */
+    border-radius: 300px;
+}
+
+.float-nav > a.menu-button.active {
+    transition: background-color 250ms linear;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.float-nav > a.menu-button.active > ul > li.line:nth-child(1) {
+    border-width: 2px;
+    -moz-transform: rotate(45deg) translate(4px, 6px);
+    -ms-transform: rotate(45deg) translate(4px, 6px);
+    -webkit-transform: rotate(45deg) translate(4px, 6px);
+    transform: rotate(45deg) translate(4px, 6px);
+}
+
+.float-nav > a.menu-button.active > ul > li.line:nth-child(2) {
+    visibility: hidden;
+}
+
+.float-nav > a.menu-button.active > ul > li.line:nth-child(3) {
+    border-width: 2px;
+    -moz-transform: rotate(-45deg) translate(8px, -10px);
+    -ms-transform: rotate(-45deg) translate(8px, -10px);
+    -webkit-transform: rotate(-45deg) translate(8px, -10px);
+    transform: rotate(-45deg) translate(8px, -10px);
+}
+
+.float-nav > a.menu-button > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.float-nav > a.menu-button > ul > li.line {
+    border: 1px solid #141619;
+    width: 100%;
+    margin-bottom: 7px;
+    -moz-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+
+.float-nav > a.menu-button > .menu-txt {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.main-nav {
+    display: none;
+    opacity: 0;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transition: opacity 250ms;
+}
+
+.main-nav.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+.main-nav > ul {
+    width: 100%;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc008;
+    box-shadow: 2px 2px 8px #777;
+    border-radius: 3px 3px 33.5px 3px;
+}
+
+.main-nav > ul > li > a {
+    text-decoration: none;
+    display: block;
+    font-weight: 200;
+    padding: 18px 80px 18px 18px;
+    color: #141619;
+}
+
+.main-nav > ul > li > a:hover {
+    font-weight: 400;
+}
+
+@media (min-width: 768px) { 
+    .float-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) { 
+    .float-nav {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 2;
+    }
 }

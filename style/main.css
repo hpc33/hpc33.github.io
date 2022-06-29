@@ -40,9 +40,9 @@ html, body {
 }
 
 @media (max-width: 768px) { 
-    .fs-xxxl {
+    /* .fs-xxxl {
         font-size: 55px;
-    }
+    } */
 }
 
 .my-nav {

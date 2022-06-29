@@ -68,7 +68,7 @@ html, body {
         height: auto !important;
     }
     .right-column-wrapper {
-        padding: 0;
+        padding: 0 0 0 0;
     }
 }
 

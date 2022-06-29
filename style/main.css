@@ -3,6 +3,12 @@ html, body {
     height:100%;
 }
 
+@media (max-width: 768px) { 
+    body {
+        overflow-x:hidden;
+    }
+}
+
 .index-profile-pic {
     width: 100%;
 }
